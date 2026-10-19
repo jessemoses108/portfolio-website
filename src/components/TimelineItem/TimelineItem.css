@@ -1,0 +1,85 @@
+.timeline-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.timeline-item__indicator {
+  flex-shrink: 0;
+  width: 48px;
+  position: relative;
+}
+
+.timeline-item__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; /* circular — confirmed by centered text in a square box */
+  background-color: var(--color-accent-blue); /* confirmed: solid fill, not tinted */
+  color: var(--color-text-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Connector line — stretches to meet the next badge, doesn't hardcode a pixel height */
+.timeline-item:not(:last-child) .timeline-item__indicator::after {
+  content: '';
+  position: absolute;
+  top: 48px;
+  bottom: -24px; /* reaches into the next li since there's no gap between items */
+  left: 23px; /* centers a 2px line under the 48px badge */
+  width: 2px;
+  background-color: var(--color-accent-purple-border); /* confirmed: purple-tinted, not blue */
+}
+
+.timeline-item__card {
+  flex: 1;
+  padding: 24px;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-accent-purple-border); /* confirmed: purple-tinted, not blue */
+  border-radius: 16px;
+  margin-bottom: 24px; /* creates the gap the connector line bridges */
+}
+
+.timeline-item__header {
+  margin-bottom: 20px;
+}
+
+.timeline-item__role {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 4px;
+}
+
+.timeline-item__company {
+  font-family: var(--font-body);
+  font-weight: 500; /* Geist Medium, confirmed */
+  font-size: 13px; /* confirmed */
+  color: var(--color-accent-blue-light); /* confirmed: light blue, not gray */
+  margin: 0;
+}
+
+.timeline-item__description {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Mobile: stack indicator above card instead of side-by-side */
+@media (max-width: 640px) {
+  .timeline-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timeline-item:not(:last-child) .timeline-item__indicator::after {
+    display: none; /* connector line doesn't make sense in a stacked layout */
+  }
+}

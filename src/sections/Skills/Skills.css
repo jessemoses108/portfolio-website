@@ -1,0 +1,27 @@
+.skills-section {
+  padding: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.skills-section__title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 32px;
+}
+
+/* Mobile-first: stack the two skill cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Desktop: side-by-side, matching Figma's 628px cards */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

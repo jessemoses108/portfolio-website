@@ -1,0 +1,87 @@
+.contact-section {
+  padding: 100px 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.contact-section__title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: 0;
+}
+
+.contact-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px; /* confirmed exact value from Figma */
+}
+
+.contact-info-column {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.collab-info {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-accent-blue-border);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.collab-info__text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.specialties-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.specialties-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.specialties-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent-blue);
+  flex-shrink: 0;
+}
+
+.socials-container { display: flex; flex-direction: column; gap: 16px; }
+
+.socials-container__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.socials-container__icons { display: flex; gap: 16px; }

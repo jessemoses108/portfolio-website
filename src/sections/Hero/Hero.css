@@ -1,0 +1,45 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px; /* was 24px — corrected against real gap */
+  padding: 80px 24px 100px; /* pt-80 pb-100, confirmed asymmetric */
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero__heading {
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.hero__heading-line {
+  display: block;
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 900; /* Outfit Black — corrected from 700 */
+  color: var(--color-text-primary);
+}
+
+.hero__heading-line--role {
+  font-size: clamp(20px, 4vw, 36px);
+  font-weight: 700; /* Outfit Bold */
+  color: var(--color-text-secondary); /* corrected from accent blue */
+  margin-top: 12px;
+}
+
+.hero__subtext {
+  max-width: 600px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6; /* corrected from 1.4 */
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}

@@ -1,0 +1,12 @@
+.availability-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-overlay-subtle);
+  border: 1px solid var(--color-overlay-border);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+}

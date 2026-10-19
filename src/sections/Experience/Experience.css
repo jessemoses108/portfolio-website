@@ -1,0 +1,19 @@
+.experience-section {
+  padding: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.experience-section__title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 32px;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

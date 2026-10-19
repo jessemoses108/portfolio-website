@@ -1,0 +1,28 @@
+/* Button.css */
+.btn {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-semibold);
+  font-size: 14px;
+  padding: var(--spacing-btn-y) var(--spacing-btn-x);
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn--primary {
+  background-color: var(--color-accent-blue-hero);
+  color: var(--color-text-white);
+}
+
+.btn--primary:hover {
+  opacity: 0.85; /* cheap, consistent hover feedback for solid-fill buttons */
+}
+
+.btn--secondary {
+  background-color: transparent;
+  border: 1.5px solid var(--color-accent-blue-hero);
+  color: var(--color-text-primary);
+}
+
+.btn--full { width: 100%; }

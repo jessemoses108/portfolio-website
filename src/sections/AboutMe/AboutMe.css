@@ -1,0 +1,56 @@
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 80px 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.about-me__text {
+  flex: 1 1 400px; /* grows on desktop, wraps to full-width on narrow screens */
+}
+
+.about-me__heading {
+  font-family: var(--font-heading);
+  font-weight: 800; /* ExtraBold */
+  font-size: 36px;
+  color: var(--color-text-primary);
+  margin: 0 0 24px;
+}
+
+.about-me__paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-me__paragraphs p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.about-me__illustration {
+  flex-shrink: 0;
+  width: 400px;
+  max-width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop: restore the strict two-column layout from Figma */
+@media (min-width: 1024px) {
+  .about-me {
+    flex-wrap: nowrap;
+    gap: 80px;
+    padding: 80px;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,67 @@
+.projects-section {
+  padding: 80px 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.projects-section__intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.projects-section__title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.projects-section__subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  max-width: 480px;
+  margin: 0;
+}
+
+/* Mobile-first: single column, every card full width */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.projects-grid__item {
+  grid-column: span 1;
+}
+
+/* Tablet: 2-up, spans collapse to whichever is smaller (2) so nothing overflows */
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-grid__item {
+    grid-column: span 1;
+  }
+}
+
+/* Desktop: the real 6-column grid from Figma, spans apply */
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .projects-grid__item {
+    grid-column: span var(--card-span);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .projects-grid__item:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+}

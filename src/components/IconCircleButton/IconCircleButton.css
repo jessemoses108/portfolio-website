@@ -1,0 +1,21 @@
+.icon-circle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-icon-btn);
+  border: 1px solid var(--color-accent-blue-border);
+  color: var(--color-text-secondary);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.icon-circle-btn:hover,
+.icon-circle-btn:focus-visible {
+  border-color: var(--color-accent-blue);
+  color: var(--color-accent-blue-text);
+}
+
+.icon-circle-btn--md { width: 40px; height: 40px; }
+
+.icon-circle-btn--lg { width: 44px; height: 44px; border-width: 1.5px; }

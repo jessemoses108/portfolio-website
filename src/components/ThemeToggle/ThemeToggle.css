@@ -1,0 +1,25 @@
+/* components/ThemeToggle/ThemeToggle.css */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--color-accent-blue-border);
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: var(--color-accent-blue-hero);
+  color: var(--color-text-primary);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
